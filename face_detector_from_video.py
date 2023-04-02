@@ -49,4 +49,4 @@ while True:
     if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
-# sample_video.release()
+sample_video.release()
