@@ -23,18 +23,30 @@ algorithm_path = Path(tool_path + "\\algorithm")
 trained_face_data = cv2.CascadeClassifier(str(algorithm_path) + "\\haarcascade_frontalface_default.xml")
 # print(trained_face_data) # debug
 
-cap = cv2.VideoCapture(str(media_path) + "\\love.mp4")
-
 # %%
+sample_video = cv2.VideoCapture(str(media_path) + "\\love.mp4")
+
+# iterate forever over frames
 while True:
-    ret, frame = cap.read()
-    if ret == True:
-        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        cv2.imshow('frame',gray)
 
-        if cv2.waitKey(30) & 0xFF == ord('q'):
+    # read the current frame
+    successful_frame_read, frame = sample_video.read()
+
+    # must convert to grayscale
+    grayscaled_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+   
+    # detect faces
+    face_coordinates  = trained_face_data.detectMultiScale(grayscaled_frame)
+    # print(face_coordinates) # debug
+
+    # get the face coordinates dynamically
+    for (x,y,w,h) in face_coordinates:
+        cv2.rectangle(frame, (x,y), (x+w, y+h), (randrange(256), randrange(256), randrange(256)), 2)
+
+    # show the video
+    cv2.imshow("Sabrina Chowdhury's Face Detector App", frame)
+
+    if cv2.waitKey(1) & 0xFF == ord('q'):
             break
-    else:
-        break
 
-cap.release()
+# sample_video.release()
