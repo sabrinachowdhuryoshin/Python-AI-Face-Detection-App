@@ -16,7 +16,7 @@ This GitHub project demonstrates simple python based applications that use machi
 
 # Installation
 - Clone the repository or download the source code
-- Install the required packages using pip: `pip install -r requirements.txt`
+- Install the required packages using pip: `pip install opencv-python`
 - Run the application using the command `python main.py`
   
 # Usage
