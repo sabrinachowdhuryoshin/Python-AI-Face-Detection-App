@@ -25,9 +25,9 @@ This GitHub project demonstrates simple python based applications that use machi
 
 - To detect faces in an image, simply change the name of the image from the `trained_face_data` variable and choose an image from the `media` folder. The application will display the image with the detected faces outlined in muiltple random colors.
 
-- To detect faces in a video, simply change the name of the video from the `trained_face_data` variable and choose a video from the `media` folder. The application will play the video with the detected faces outlined in in muiltple random colors. To stop the video feed, poress the `q` button.
+- To detect faces in a video, simply change the name of the video from the `trained_face_data` variable and choose a video from the `media` folder. The application will play the video with the detected faces outlined in muiltple random colors. To stop the video feed, press the `q` button.
 
-- To detect faces in a live webcam feed, just run the module. The application will open your computer's default camera and begin detecting faces in real-time. To stop the webcam feed, poress the `q` button.
+- To detect faces in a live webcam feed, simply run the python module,  `python face_detector_from_webcam.py`. The application will open your computer's default camera and begin detecting faces in real-time. To stop the webcam feed, press the `q` button.
 
 # Customization
 This application can be easily customized to suit specific use cases. To do so, you can modify the individual `.py` files to include additional functionality, or modify the `haarcascade_frontalface_default.xml` file to train the model on a different set of faces.
