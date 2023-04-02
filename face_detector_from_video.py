@@ -50,3 +50,6 @@ while True:
             break
 
 sample_video.release()
+
+# %%
+print("\nCode Completed!\n")

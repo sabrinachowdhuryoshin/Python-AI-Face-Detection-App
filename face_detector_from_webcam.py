@@ -50,3 +50,6 @@ while True:
             break
 
 webcam.release()
+
+# %%
+print("\nCode Completed!\n")
