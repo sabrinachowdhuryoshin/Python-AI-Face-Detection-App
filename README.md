@@ -1,6 +1,6 @@
 # Python AI Face Detection App
 
-This GitHub project demostrates simple python based applications that use machine learning algorithms to detect faces in images, live webcam feeds, and videos.
+This GitHub project demonstrates simple python based applications that use machine learning algorithms to detect faces in images, live webcam feeds, and videos.
 
 # Features
 - Can detect faces in static images or in live webcam feeds
