@@ -1,12 +1,40 @@
-import cv2
+'''' standard python library '''
+
+import os, cv2
+from pathlib import Path
 from random import randrange
 
-# load the cascade
+# %%
+
+'''' define directory paths '''
+
+tool_path = os.path.dirname(os.path.abspath(__file__))
+# print(tool_path) # debug
+
+media_path = Path(tool_path + "\\media")
+# print(media_path ) # debug
+
+algorithm_path = Path(tool_path + "\\algorithm")
+# print(algorithm_path ) # debug
+
+# %%
+# load the cascade algorithm
 # haarcascade algorithm only takes the gray scale images
-trained_face_data = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+trained_face_data = cv2.CascadeClassifier(str(algorithm_path) + "\\haarcascade_frontalface_default.xml")
+# print(trained_face_data) # debug
 
-# to capture video from webcam
-webcam = cv2.VideoCapture[0]
-# cv2.waitKey(1000)
+cap = cv2.VideoCapture(str(media_path) + "\\love.mp4")
 
-print("Code Completed")
+# %%
+while True:
+    ret, frame = cap.read()
+    if ret == True:
+        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        cv2.imshow('frame',gray)
+
+        if cv2.waitKey(30) & 0xFF == ord('q'):
+            break
+    else:
+        break
+
+cap.release()

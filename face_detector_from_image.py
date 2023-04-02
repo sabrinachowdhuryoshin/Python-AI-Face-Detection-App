@@ -11,22 +11,22 @@ from random import randrange
 tool_path = os.path.dirname(os.path.abspath(__file__))
 # print(tool_path) # debug
 
-img_path = Path(tool_path + "\\image")
-# print(img_path ) # debug
+media_path = Path(tool_path + "\\media")
+# print(media_path ) # debug
 
-algprtithm_path = Path(tool_path + "\\algorithm")
+algorithm_path = Path(tool_path + "\\algorithm")
 # print(algorithm_path ) # debug
 
 # %%
 # load the cascade algorithm
 # haarcascade algorithm only takes the gray scale images
-trained_face_data = cv2.CascadeClassifier(str(algprtithm_path) + "\\haarcascade_frontalface_default.xml")
+trained_face_data = cv2.CascadeClassifier(str(algorithm_path) + "\\haarcascade_frontalface_default.xml")
 # print(trained_face_data) # debug
 
 # choose an image to detect faces in
-# img = cv2.imread(str(img_path) + "\\Robert_Downey_Jr.png")
-# img = cv2.imread(str(img_path) + "\\Multiple_Faces_01.jpg")
-img = cv2.imread(str(img_path) + "\\Multiple_Faces_02.jpg")
+# img = cv2.imread(str(media_path) + "\\Robert_Downey_Jr.png")
+# img = cv2.imread(str(media_path) + "\\Multiple_Faces_01.jpg")
+img = cv2.imread(str(media_path) + "\\Multiple_Faces_02.jpg")
 # print(img) # debug
 
 # show the image 
