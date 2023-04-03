@@ -32,5 +32,15 @@ This GitHub project demonstrates simple python based applications that use machi
 # Customization
 This application can be easily customized to suit specific use cases. To do so, you can modify the individual `.py` files to include additional functionality, or modify the `haarcascade_frontalface_default.xml` file to train the model on a different set of faces.
 
+# Contributing
+
+Contributions are welcome! If you would like to contribute to this project, please follow these steps:
+
+- Fork the repository
+- Create a new branch for your feature or bug fix
+- Make your changes and commit them
+- Push your changes to your fork
+- Submit a pull request
+  
 # License
 This project is licensed under the Unlicense - see the `LICENSE.md` file for details.
